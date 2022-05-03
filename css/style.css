@@ -38,11 +38,10 @@ html {
       width: 40%;
       height: auto;
   }
-  .content{
+  .content-side{
     color: #FFFFFF;
     padding: 5px;
     margin: 10px;
-    text-decoration: none;
     text-align: justify;
     font-size: 15pt;
   }
@@ -62,22 +61,55 @@ html {
  }
  .title-side{
      text-align: center;
-     font-size: 40pt;
+     font-size: 25pt;
      color: white;
  }
- .judul-desc{
-    color: #2e2c2c;
-    padding: 10px;
+.judul-desc{
+    padding: 0px;
     margin: auto;
     text-decoration: none;
-    text-align: justify;
+    text-align: left;
+    font-size: 20pt;
+    background-color: rgb(199, 199, 199) ; 
+    text-indent: 25px;
  }
- .title-foto{
+.title-foto{
   text-align: center;
 }
 .title-desc{
   text-align: center;
-  font-size: 40pt;
+  font-size: 30pt;
   color: black;
   margin: 0px;
 }
+.sub-title{
+  border-top: solid #000000;
+  border-bottom: solid #000000;
+  font-size: 20pt;
+}
+.content-desc{
+  color: black;
+  padding: 5px;
+  margin: 10px;
+  text-decoration: none;
+  text-align: justify;
+  font-size: 15pt;
+}
+.sub-content-desc{
+  color: black;
+  text-align: left;
+  font-size: 10pt;
+}
+#sub-side{
+    float: left;   
+    text-decoration: none;
+    width: 50%;
+    height: auto;
+}
+#sub-desc{
+   float: right;    
+   text-decoration: none;
+   width: 50%;
+   height: auto;
+}
+
