@@ -21,6 +21,7 @@ html {
       background-color:rgb(188, 191, 191);
       width: auto;
       height: auto;
+      text-align:left;
   }
   .bold{
       font-weight: bold;
@@ -43,6 +44,7 @@ html {
     margin: 10px;
     text-decoration: none;
     text-align: justify;
+    font-size: 15pt;
   }
  .foto{
     width: 300px;
@@ -52,18 +54,30 @@ html {
  }
  #description{
     float: right;
-    background-color: rgba(208, 205, 205, 0.815);    
+    background-color: white ;    
     text-decoration: none;
     width: 60%;
     height: auto;
+    padding: 10px;
  }
- .title{
+ .title-side{
      text-align: center;
+     font-size: 40pt;
+     color: white;
  }
- .content-desc{
+ .judul-desc{
     color: #2e2c2c;
     padding: 10px;
     margin: auto;
     text-decoration: none;
     text-align: justify;
  }
+ .title-foto{
+  text-align: center;
+}
+.title-desc{
+  text-align: center;
+  font-size: 40pt;
+  color: black;
+  margin: 0px;
+}
