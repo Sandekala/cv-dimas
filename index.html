@@ -4,12 +4,10 @@
         <title>Resume - Dimas Abdul Aziz 2022</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header>
-            <br>
-            <br>        
-        </header>
         <div id=sidebar class="title-foto">
             <img class="foto" src="images/dimas.png">
             <br>
@@ -27,9 +25,13 @@
         <div class="content-side">
             <li>Universitas Bina Sarana Informatika</li>
             <p>Diploma Sistem Informasi | 2017 - 2020</p>
-            <p>IPK 3.12 / 4</p><br>
-            <li>SMAN 1 Banjarsari</li>
-            <p>Jurusan IPS | 2011 - 2014</p>
+            <p>IPK 3.12 / 4</p>
+            <button type="button" id="myImg" class="btn btn-primary" >Lihat Ijazah</button>
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img src="images/Ijazah.png">
+                <div id="caption"></div>
+              </div><br>
             <hr>
         </div>
         <div class="title-side">
@@ -69,7 +71,7 @@
                         <li>Membuat laporan kondisi Kas yang dikelola.</li>
                     </ul>
                     <li>PELAKSANA ADMIN</li>
-                    <p>PT. Bringin Gigantara | Nov 2017 - OKT 2022</p>
+                    <p>PT. Bringin Gigantara | Nov 2017 - Okt 2022</p>
                     <ul class="sub-content-desc">
                         <li>Memastikan seluruh kegiatan operasional Cash Handling telah sesuai dengan SOP.</li>
                         <li>Memastikan semua kegiatan operasional Cash Handling sesuai dengan SLA yang telah ditetapkan.</li>
@@ -78,7 +80,7 @@
                         <li>Membuat laporan kondisi Kas yang dikelola.</li>
                     </ul>
                     <li>PELAKSANA CUSTODY</li>
-                    <p>PT. Bringin Gigantara | MAR 2015 - OKT 2017</p>
+                    <p>PT. Bringin Gigantara | Mar 2015 - Okt 2017</p>
                     <ul class="sub-content-desc">
                         <li>Memastikan seluruh kegiatan operasional Cash Handling telah sesuai dengan SOP.</li>
                         <li>Memastikan semua kegiatan operasional Cash Handling sesuai dengan SLA yang telah ditetapkan.</li>
@@ -92,15 +94,56 @@
                 <b>KEAHLIAN</b>
             </div>
             <div class="content-desc">
-                <div id=sub-side>
+                <div class="sub-side">
+                    <ul>
                     <li>Administrasi</li>
                     <li>Penyelesaian Masalah</li>
                     <li>Leadership</li>
-                </div>
-                <div id=sub-desc>
+                </ul>
+            </div>
+                <div class="sub-desc">
+                    <ul>
                     <li>Pelayanan Pelanggan</li>
                     <li>Manajerial</li>
                     <li>Microsoft Office</li>
-                </div>
+                </ul>
             </div>
+        </div>
+            <div class="judul-desc">
+                <b>MEDIA SOSIAL</b>
+            </div>
+            <div class="content-desc" style="justify-content: space-around;">
+            <a class="social-media-icon" href="https://www.linkedin.com/in/dimas-abdul-aziz-6a6b6b1a6" target="_blank"><span class="fab fa-linkedin"></span></a>
+            <a class="social-media-icon" href="https://github.com/Sandekala" target="_blank"><span class="fab fa-github"></span></a>
+            <a class="social-media-icon" href="https://instagram.com/diimasaziiz" target="_blank"><span class="fab fa-instagram"></span></a>
+            <a class="social-media-icon" href="https://twitter.com/diimasaziiz" target="_blank"><span class="fab fa-twitter"></span></a>
+        </div>
+        <br><br>
+        <div class="title-foto">
+            <button class="button"style="vertical-align:middle"><span>Download Resume</span></button>
+        </div>
         </body>
+
+
+
+<script>
+        // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
