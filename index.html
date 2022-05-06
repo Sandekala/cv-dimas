@@ -5,7 +5,6 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" href="fontawesome/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div id=sidebar class="title-foto">
@@ -26,11 +25,13 @@
             <li>Universitas Bina Sarana Informatika</li>
             <p>Diploma Sistem Informasi | 2017 - 2020</p>
             <p>IPK 3.12 / 4</p>
-            <button type="button" id="myImg" class="btn btn-primary" >Lihat Ijazah</button>
-            <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img src="images/Ijazah.png" class="center">
-              </div><br>
+            <a class="btn btn-primary" href="#popup">Lihat Ijazah</a>
+            <div class="popup-wrapper" id="popup">
+                <div class="popup-container">
+                    <img src="images/Ijazah.png" style="position: absolute;">
+                </div>
+                <a class="popup-close" href="#closed">X</a>
+            </div>
             <hr>
         </div>
         <div class="title-side">
@@ -124,25 +125,3 @@
         </div>
         </body>
         </html>
-
-
-<script>
-        // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-</script>
