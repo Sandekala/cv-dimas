@@ -6,13 +6,16 @@ html {
 body {
   margin: 0;
   padding: 10px;
+  background-image: url(../images/bc.png);
 }
 .container {
   padding: 3px 3px;
   border: solid black;
   margin: 0px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  
 }
+
 #isi {
   border: 10px solid aliceblue;
   clear: both;
@@ -41,8 +44,7 @@ body {
   float: left;
   background-color: #2e2c2c;
   text-decoration: none;
-  width: 40%;
-  height: 1100px;
+  width: 40%;;
 }
 .content-side {
   color: #ffffff;
@@ -61,7 +63,6 @@ body {
   background-color: white;
   text-decoration: none;
   width: 60%;
-  height: 1100px;
   padding: 30px;
 }
 .title-side {
@@ -89,7 +90,7 @@ body {
 }
 .sub-title {
   border-top: solid #000000;
-  border-bottom: solid #000000;
+  border-bottom: solid hsl(0, 0%, 0%);
   font-size: 20pt;
 }
 .content-desc {
@@ -170,120 +171,6 @@ a.social-media-icon:hover {
   margin-right: auto;
   width: 90%;
 }
-a.popup-link {
-  padding: 17px 0;
-  text-align: center;
-  margin: 7% auto;
-  position: relative;
-  width: 300px;
-  color: #fff;
-  text-decoration: none;
-  background-color: #ffba00;
-  border-radius: 3px;
-  box-shadow: 0 5px 0px 0px #eea900;
-  display: block;
-}
-a.popup-link:hover {
-  background-color: #ff9900;
-  box-shadow: 0 3px 0px 0px #eea900;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-/* end link popup*/
-
-/*style untuk popup */
-#popup {
-  visibility: hidden;
-  opacity: 0;
-  margin-top: 0px;
-}
-#popup:target {
-  visibility: visible;
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  z-index: 99999999999;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s;
-}
-
-@media (min-width: 768px) {
-  .popup-container {
-    width: 600px;
-  }
-}
-@media (max-width: 767px) {
-  .popup-container {
-    width: 100%;
-  }
-}
-.popup-container {
-  position: relative;
-  margin: 7% auto;
-  padding: 0px;
-  background-color: #333;
-  color: #fff;
-  border-radius: 3px;
-}
-
-a.popup-close {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  background-color: #fff;
-  padding: 7px 10px;
-  font-size: 20px;
-  text-decoration: none;
-  line-height: 1;
-  color: #333;
-}
-
-/* style untuk isi popup */
-
-.popup-form {
-  margin: 10px auto;
-}
-.popup-form h2 {
-  margin-bottom: 5px;
-  font-size: 37px;
-  text-transform: uppercase;
-}
-.popup-form .input-group {
-  margin: 10px auto;
-}
-.popup-form .input-group input {
-  padding: 17px;
-  text-align: center;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  font-size: 16px;
-  display: block;
-  width: 100%;
-}
-.popup-form .input-group input:focus {
-  outline-color: #fb8833;
-}
-.popup-form .input-group input[type="email"] {
-  border: 0px;
-  position: relative;
-}
-.popup-form .input-group input[type="submit"] {
-  background-color: #fb8833;
-  color: #fff;
-  border: 0;
-  cursor: pointer;
-}
-.popup-form .input-group input[type="submit"]:focus {
-  box-shadow: inset 0 3px 7px 3px #ea7722;
-}
-/* end isi form */
 /* Reset CSS */
 * {
   margin: 0;
@@ -295,4 +182,88 @@ a.popup-close {
 img {
   max-width: 100% !important;
   height: auto;
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
+
+
+
+ /** Galery **/
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99999;
+  transition: .3s;
+  text-align: center;
+  padding: 30px 0px;
+
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .8);
+}
+
+.overlay img{
+  max-height: 100%;
+}
+.overlay:target img {
+  animation: zoomDanFade 1s;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+}
+
+.galery li {
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+/* Animasi */
+@keyframes zoomDanFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

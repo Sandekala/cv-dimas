@@ -2,11 +2,12 @@
 <html>
   <head>
     <title>Resume - Dimas Abdul Aziz 2022</title>
+    <link rel="stylesheet" href="css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
   </head>
-  <body style="background-image: url(images/bc.png)">
+  <body class="cf">
     <div class="container">
       <div id="sidebar" class="title-foto">
         <img class="foto" src="images/dimas.png" />
@@ -31,13 +32,22 @@
           <li>Universitas Bina Sarana Informatika</li>
           <p>Diploma Sistem Informasi | 2017 - 2020</p>
           <p>IPK 3.12 / 4</p>
-          <a class="btn btn-primary" href="#popup">Lihat Ijazah</a>
-          <div class="popup-wrapper" id="popup">
-            <div class="popup-container">
-              <img src="images/Ijazah.png" style="position: absolute" />
-            </div>
-            <a class="popup-close" href="#closed">X</a>
+          <ul class="galery cf">
+            <li>
+          <a class="btn btn-primary" href="#ijazah">Lihat Ijazah</a>
+          <div class="overlay" id="ijazah">
+            <a href="#" class="close">X</a>
+            <img src="images/Ijazah.png" alt="Ijazah">
           </div>
+        </li>
+        <li>
+          <a class="btn btn-primary"  href="#transkrip">Lihat Transkrip Nilai</a>
+          <div class="overlay" id="transkrip">
+            <a href="#" class="close">X</a>
+            <img src="images/transkrip.png" alt="Transkrip Nilai">
+          </div>
+        </li>
+        </ul>
           <hr />
         </div>
         <div class="title-side">
@@ -46,6 +56,15 @@
         <div class="content-side">
           <li>Sertifikat Kompetensi Pemrogram</li>
           <p>Pengembang Perangkat Lunak | 2020 - 2023</p>
+          <ul class="galery cf">
+            <li>
+          <a class="btn btn-primary" href="#serkom">Lihat Sertifikat</a>
+          <div class="overlay" id="serkom">
+            <a href="#" class="close">X</a>
+            <img src="images/serkom.png" alt="Sertifikat Kompetensi">
+          </div>
+        </li>
+        </ul>
           <hr />
         </div>
         <div class="title-side">
